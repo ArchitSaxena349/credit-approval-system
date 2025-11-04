@@ -328,4 +328,4 @@ The project follows Django best practices with:
 
 ## License
 
-This project is developed as an assignment for backend development assessment.
+This project is developed by Archit Saxena.
