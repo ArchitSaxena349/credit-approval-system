@@ -158,3 +158,21 @@ def view_customer_loans(request, customer_id):
     loans = Loan.objects.filter(customer=customer)
     serializer = CustomerLoanSerializer(loans, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def api_root(request):
+    """
+    List all available API endpoints
+    """
+    return Response({
+        'message': 'Welcome to the Credit Approval System API',
+        'endpoints': {
+            'register_customer': '/register/',
+            'check_eligibility': '/check-eligibility/',
+            'create_loan': '/create-loan/',
+            'view_loan': '/view-loan/<loan_id>/',
+            'view_customer_loans': '/view-loans/<customer_id>/',
+        },
+        'documentation': 'See README.md for detailed usage instructions'
+    }, status=status.HTTP_200_OK)
