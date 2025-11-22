@@ -17,7 +17,7 @@ from .serializers import (
     LoanDetailSerializer,
     CustomerLoanSerializer
 )
-from .utils import check_loan_eligibility, calculate_monthly_installment
+from .services import check_loan_eligibility, calculate_monthly_installment
 
 
 @api_view(['POST'])

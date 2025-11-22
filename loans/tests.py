@@ -4,7 +4,7 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from decimal import Decimal
 from .models import Customer, Loan
-from .utils import calculate_credit_score, calculate_monthly_installment
+from .services import calculate_credit_score, calculate_monthly_installment
 
 
 class CustomerModelTest(TestCase):

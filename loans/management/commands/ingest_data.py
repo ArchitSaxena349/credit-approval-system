@@ -11,13 +11,13 @@ class Command(BaseCommand):
             '--customer-file',
             type=str,
             help='Path to customer data Excel file',
-            default='customer_data.xlsx'
+            default='data/customer_data.xlsx'
         )
         parser.add_argument(
             '--loan-file',
             type=str,
             help='Path to loan data Excel file',
-            default='loan_data.xlsx'
+            default='data/loan_data.xlsx'
         )
         parser.add_argument(
             '--async',
